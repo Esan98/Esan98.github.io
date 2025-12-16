@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Texas Hold'em Poker</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	</style>
+</head>
+<body id="body">
+  <h1 id="title">Texas Holdem Poker</h1>
+  <div id="playerBet"></div>
+  <div id="balance"></div>
+  <button id="startbtn">Start Game</button>
+  <div id="comCards">
+	<img id="river"></img>
+	<img id="turn"></img>
+	<img id="flop3"></img>
+	<img id="flop2"></img>
+	<img id="flop1"></img>
+	<img id="deckTop" src="deckTop.png">
+  </div>
+  <div class="jackpotContainer">
+	<img id="jackpot" src="jackpot.png">
+	<div id="pot"></div>
+	<div id="hand">Your cards are <span id="card1"></span> and <span id="card2"></span></div>
+	<div id="handDisplay">
+		<img id="deal1"></img>
+		<img id="deal2"></img>
+	</div>
+  </div>
+  <div id="actionbtns">
+	<button id="callbtn">Call</button>
+	<button id="betbtn">Bet</button>
+	<button id="foldbtn">Fold</button>
+  </div>
+  <div id="chatlog"></div>
+  <script src="script.js"></script>
+</body>
+</html>

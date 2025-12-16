@@ -1,0 +1,374 @@
+h1 {
+	text-align: center;
+	margin-top: 200px;
+	font-family: "Brush Script MT";
+	font-size: 175px;
+	text-shadow:
+    0 0 5px #1170ed,
+    0 0 10px #1170ed,
+    0 0 20px #11c5ed,
+    0 0 30px #11c5ed;
+	animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+	0%, 19%, 21%, 23%, 80%, 82%, 100% {
+		text-shadow:
+		0 0 5px #1170ed,
+		0 0 10px #1170ed,
+		0 0 20px #11c5ed,
+		0 0 30px #11c5ed;
+		opacity: 1;
+  }
+  
+  20%, 22%, 81% {
+    text-shadow:
+      0 0 2px #1170ed,
+      0 0 4px #1170ed,
+      0 0 5px #11c5ed,
+      0 0 8px #11c5ed;
+    opacity: 0.6;
+  }
+}
+
+
+#startbtn {
+    background-color: black;
+    color: white;
+    font-size: 60px;
+    border: 3px solid #11c5ed;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 0 20px #11c5ed;
+    cursor: pointer;
+    transition: 0.3s;
+	margin: 0 auto;
+	display: block;
+	margin-top: 200px;
+}
+
+#startbtn:hover {
+    box-shadow: 0 0 40px #11c5ed, 0 0 80px #1170ed;
+    color: #11c5ed;
+}
+
+body {
+	background-image: url("casinoFront.png");
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;	
+	position: relative;
+}
+
+.hide {
+	display: none;
+}
+
+.table {
+	background-image: url("pokerTable.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+}
+
+#balance {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	font-size: 75px;
+	font-family: "Orbitron", "Segoe UI", sans-serif;
+	font-weight: 700;
+	color: #00ff66;
+	text-shadow:
+    0 0 10px #00ff66,
+    0 0 20px #00cc55,
+    0 0 40px #009933;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+#actionbtns {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 860px;
+}
+
+#foldbtn {
+	display: none;
+}
+
+.showfoldbtn {
+	background-color: #ff0505;
+    color: black;
+    padding: 20px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+	display: inline-block !important;
+}
+
+.showfoldbtn:hover {
+	background-color: #960000;
+}
+
+#callbtn {
+	display: none;
+}
+
+.showcallbtn {
+	background-color: #0384fc;
+    color: black;
+    padding: 20px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+	display: inline-block !important;
+}
+
+.showcallbtn:hover {
+	background-color: #0063bf;
+}
+
+#betbtn {
+	display: none;
+}
+
+.showbetbtn {
+	background-color: #1dc200;
+    color: black;
+    padding: 20px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+	display: inline-block !important;
+}
+
+.showbetbtn:hover {
+	background-color: #158a00;
+}
+
+#chatlog {
+	display: none;
+}
+
+.showchatlog {
+	height: 133px;
+	width: 200px;
+	overflow: auto;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #1b9fa6;
+	background-color: black;
+	display: flex !important;
+	flex-direction: column;
+	opacity: 100%;
+}
+
+#jackpot {
+	display: none;
+}
+
+.jackpotContainer {	
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+
+.showjackpot {
+	width: 30%;
+	display: inline-block !important;
+	z-index: 0;
+	position: absolute;
+}
+
+#pot {
+	display: inline-block !important;
+	z-index: 1;
+	font-size: 60px;
+	position: absolute;
+	font-family: "Playfair Display", "Georgia", serif;
+	font-weight: bold;
+	color: #ffd700;
+	text-align: center;
+	text-shadow:
+    0 0 10px #ff4500,
+    0 0 20px #ff4500,
+    0 0 40px #ff0000,
+    0 0 80px #ff0000;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.showchatlog::-webkit-scrollbar {
+  width: 10px;
+}
+
+.showchatlog::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.showchatlog::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1b9fa6, #11757a);
+  border-radius: 10px;
+  box-shadow:
+    0 0 5px #1b9fa6,
+    0 0 10px #1b9fa6,
+    inset 0 0 5px #0a0a0a;
+  transition: all 0.3s ease;
+}
+
+.showchatlog::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #23c4cc, #1b9fa6);
+  box-shadow:
+    0 0 10px #23c4cc,
+    0 0 20px #23c4cc,
+    inset 0 0 10px #0a0a0a;
+}
+
+#hand {
+	display: none;
+}
+
+.showhand {
+	font-family: "Orbitron", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #e9fff6;
+	letter-spacing: 0.6px;
+	text-shadow:
+    0 1px 0 rgba(0,0,0,0.6),
+    0 6px 18px rgba(27,159,166,0.06);
+	white-space: nowrap;
+	position: relative;
+	top: 170px;
+	z-index: 2;
+	display: inline-block !important;
+}
+
+.showHandFadeIn {
+	overflow: hidden;
+    opacity: 0;
+    animation: handReveal 2s ease forwards;
+}
+
+@keyframes handReveal {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform: translateX(-25px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0);
+		opacity: 1;
+    }
+}
+
+.redSuit {
+	font-family: "Orbitron", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ff2e2e;
+	text-shadow:
+	0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #ff0000;
+}
+
+.blackSuit {
+	font-family: "Orbitron", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #e6e6e6;
+	text-shadow:
+	0 0 10px #ffffff,
+	0 0 20px #d9d9d9,
+	0 0 30px #bfbfbf,
+	0 0 40px #a6a6a6;
+}
+
+#comCards {
+    display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 95px;
+	left: 530px;
+}
+
+#deckTop {
+	display: none;
+}
+
+.showDeckTop {
+	width: 120px;
+	height: 170px;
+	display: inline-block !important;
+	margin: 20px;
+}
+
+.card {
+    background-image: url("Cards_Dark.png");
+    background-repeat: no-repeat;
+    background-size: calc(14 * 120px) calc(4 * 170px);
+    border-radius: 12px;
+	width: 120px;
+    height: 170px;
+}
+
+#flop1, #flop2, #flop3, #turn, #river {
+	width: 120px;
+	height: 170px;
+	display: inline-block !important;
+	visibility: hidden;
+	margin: 10px;
+}
+
+.deal {
+    animation: dealFromDeck 0.4s ease-out forwards;
+}
+
+@keyframes dealFromDeck {
+    0% {
+        transform: var(--deal-transform);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+#handDisplay {
+	position: absolute;
+	top: 667px;
+}
